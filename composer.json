@@ -1,0 +1,32 @@
+{
+    "name": "codypchristian/nativephp-lottie",
+    "description": "In-app Lottie EDGE component (<native:lottie-view>) for NativePHP Mobile v4 — bundled or URL dotLottie playback on iOS & Android.",
+    "type": "nativephp-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cody (QikSolutions, LLC)"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "nativephp/mobile": "^4.0|dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "CodyPChristian\\NativeLottie\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CodyPChristian\\NativeLottie\\NativeLottieServiceProvider"
+            ]
+        },
+        "nativephp": {
+            "manifest": "nativephp.json"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

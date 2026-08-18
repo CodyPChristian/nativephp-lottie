@@ -1,0 +1,44 @@
+{
+    "name": "codypchristian/nativephp-lottie",
+    "version": "0.2.4",
+    "description": "QikCMS in-app Lottie EDGE component (<native:lottie-view>).",
+    "namespace": "NativeLottie",
+    "platforms": ["android", "ios"],
+    "bridge_functions": [],
+    "components": [
+        {
+            "type": "lottie_view",
+            "element": "CodyPChristian\\NativeLottie\\Elements\\LottieView",
+            "blade": "CodyPChristian\\NativeLottie\\Components\\LottieView",
+            "android_renderer": "com.codypchristian.nativephp.lottie.ui.LottieViewRenderer",
+            "ios_renderer": "LottieViewRenderer",
+            "self_closing": true
+        }
+    ],
+    "android": {
+        "min_version": 26,
+        "init_function": "com.codypchristian.nativephp.lottie.registerNativeLottie",
+        "dependencies": {
+            "implementation": [
+                "com.airbnb.android:lottie-compose:6.7.1"
+            ]
+        }
+    },
+    "ios": {
+        "min_version": "18.0",
+        "init_function": "registerNativeLottie",
+        "dependencies": {
+            "swift_packages": [
+                {
+                    "url": "https://github.com/airbnb/lottie-spm.git",
+                    "version": "0.2.4",
+                    "products": ["Lottie"]
+                }
+            ],
+            "pods": []
+        }
+    },
+    "hooks": {
+        "copy_assets": "nativephp:lottie:copy-assets"
+    }
+}
