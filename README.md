@@ -49,7 +49,11 @@ The plugin declares its own native dependencies via `nativephp.json`, so no
 manual Gradle/SPM wiring is required:
 
 - **Android** — `com.airbnb.android:lottie-compose` (min SDK 26).
-- **iOS** — the `lottie-spm` Swift package (`Lottie` product, min iOS 18.0).
+- **iOS** — the `lottie-spm` Swift package (`Lottie` product, min iOS 18.0),
+  pinned to 4.6.1 (`upToNextMajor`). That version is airbnb/lottie-spm's own
+  release series and is unrelated to this plugin's version — pinning it to the
+  plugin version makes Xcode fail the build with "Could not resolve package
+  dependencies: no versions of 'lottie-spm' match the requirement".
 
 ## Install
 

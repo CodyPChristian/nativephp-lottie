@@ -1,6 +1,6 @@
 {
     "name": "codypchristian/nativephp-lottie",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "description": "QikCMS in-app Lottie EDGE component (<native:lottie-view>).",
     "namespace": "NativeLottie",
     "platforms": ["android", "ios"],
@@ -31,7 +31,7 @@
             "swift_packages": [
                 {
                     "url": "https://github.com/airbnb/lottie-spm.git",
-                    "version": "0.2.4",
+                    "version": "4.6.1",
                     "products": ["Lottie"]
                 }
             ],
